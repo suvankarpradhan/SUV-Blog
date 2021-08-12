@@ -1,0 +1,58 @@
+body {
+  background-color: #ebeae3;
+  background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
+  padding-bottom: 10%;
+}
+label {
+  color: rgb(13, 73, 88);
+}
+.user-page-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navbar {
+  background: linear-gradient(90deg, #034e10, #012715);
+  opacity: 0.8;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background: linear-gradient(90deg, #034e10, #012715);
+  opacity: 0.5;
+  color: #fff;
+  padding-top: 1%;
+}
+.footer .bi {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.copyright {
+  flex-direction: row;
+  flex: 50%;
+  justify-content: flex-start;
+}
+.right-links {
+  flex-direction: row;
+  flex: 50%;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 775px) {
+  .footer .container {
+    flex-direction: column;
+  }
+  .copyright {
+    justify-content: center;
+    align-items: center;
+  }
+  .right-links {
+    justify-content: center;
+    align-items: center;
+  }
+  .foot-link {
+    justify-content: center;
+    padding-bottom: 2%;
+  }
+}

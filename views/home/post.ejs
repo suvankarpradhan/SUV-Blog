@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/header-link') %>
+  </head>
+  <body>
+    <%- include('../partials/navbar') %>
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-11">
+          <div class="card mb-3">
+            <img
+              src="../uploads/<%= selectedPost.imageName %>"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body p-4">
+              <h4 class="card-title text-dark">
+                <%= selectedPost.blogTitle %>
+              </h4>
+              <p class="card-text text-secondary"><%=selectedPost.blogBody%></p>
+            </div>
+          </div>
+          <a href="/" type="button" class="btn btn-outline-secondary">Back</a>
+        </div>
+      </div>
+    </div>
+    <%- include('../partials/footer-link') %>
+  </body>
+  <%- include('../partials/footer') %>
+</html>

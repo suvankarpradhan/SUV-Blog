@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/header-link') %>
+  </head>
+  <body>
+    <%- include('../partials/navbar') %>
+    <div class="container my-5">
+      <div class="user-page-heading">
+        <a href="/blog/new" type="button" class="btn btn-success mx-3"
+          >Add New</a
+        >
+        <a href="/logout" type="button" class="btn btn-secondary">Log Out</a>
+      </div>
+      <h1>Your All posts</h1>
+      <hr />
+      <div class="row justify-content-center">
+        <div
+          class="col-8 px-4"
+          style="border-radius: 4px; background-color: rgba(255, 255, 255, 0.5)"
+        >
+          <div class="mt-4">
+            <% blogList.forEach(blog => { %>
+            <h4><%= blog.blogTitle %></h4>
+            <p><%= blog.blogBody.substring(0,100) %>...</p>
+
+            <div class="mb-4">
+              <a
+                type="button"
+                class="btn btn-sm"
+                href="/blog/update/<%=blog._id%>"
+                ><i class="bi bi-pencil-fill" style="color: blue"></i
+              ></a>
+              <a
+                type="button"
+                class="btn btn-sm"
+                href="/blog/delete/<%=blog._id%>"
+                ><i class="bi bi-trash" style="color: red"></i
+              ></a>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('../partials/footer-link') %>
+  </body>
+  <%- include('../partials/footer') %>
+</html>
